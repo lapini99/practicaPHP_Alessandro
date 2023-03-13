@@ -1,0 +1,32 @@
+#profile-container {
+    text-align: center;
+    overflow: hidden;
+    height: 520px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.231);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+
+input{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#prof-pic-preview {
+    padding: 3%;
+    border: none;
+    height: 25%;
+    width: max-content;
+    border-radius: 50%;
+}

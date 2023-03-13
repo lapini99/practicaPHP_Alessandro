@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url("../multimedia/images/bg-image.jpg");
+}
+
+.container {
+    position: relative;
+    padding: 50px 35px;
+    text-align: center;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+}
+
+#forms-container {
+    overflow: hidden;
+    height: 520px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.231);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+
+input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
+    -webkit-animation-name: hvr-back-pulse;
+    animation-name: hvr-back-pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-color: rgb(218, 165, 174);
+    color: white;
+}
+
+.item-form {
+    width: 50%;
+}
+
+.form {
+    padding: 3%;
+    text-align: left;
+}
+
+
