@@ -18,7 +18,7 @@
     ?>
     <div id="game-wrapper">
         <div class="game">
-            <iframe class='game-trailer' src='https://www.youtube.com/embed/Krc1t4HU8GI?autoplay=1&loop=1' title='MGSV: THE PHANTOM PAIN - E3 2014 Trailer (CHN)' frameborder='0' allow='accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
+            <iframe class='game-trailer' src='https://www.youtube.com/embed/Krc1t4HU8GI?autoplay=1&controls=0' title='MGSV: THE PHANTOM PAIN - E3 2014 Trailer (CHN)' frameborder='0' allow='accelerometer; autoplay; controls; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
             <img class="game-cover" src="./multimedia/images/GamesCovers/mgsv.jpg" alt="mgsv-cover">
             <h1>Metal Gear Solid V</h1>
             <h2>Hideo Kojima</h2>
@@ -26,7 +26,10 @@
                 laborum obcaecati labore consectetur
                 soluta maiores delectus quod suscipit, corrupti optio, placeat esse atque autem nemo
                 mollitia similique est veritatis!</q><br>
-            <button class="download"><a href="">Descargar</a></button>
+            <form action='./gameInfo.php' method='post'>
+                <input type='number' name='id' id='id' value='<?= $row["id"]?>' hidden>
+                <input type='submit' value='Ver más'>
+            </form>
         </div>
         <?php
         require_once("./src/db/gameMapper.php");
