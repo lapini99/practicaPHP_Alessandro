@@ -1,4 +1,5 @@
 #game-wrapper {
+    margin: 5%;
     display: flex;
     flex-wrap: wrap;
     row-gap: 5px;
@@ -6,6 +7,7 @@
 }
 
 .game {
+    padding: 1%;
     width: 25%;
     top: 50%;
     left: 50%;
@@ -15,19 +17,36 @@
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
 }
 
+.game:hover .game-cover {
+  display: none;
+}
+
+.game:hover .game-trailer{
+  display: block;
+}
+
 .game-cover {
-    object-fit: fill;
-    height: 200px;
-    width: 100%;
+  border-radius: 2%;
+  object-fit: fill;
+  height: 200px;
+  width: 100%;
+}
+
+.game-trailer {
+  border-radius: 2%;
+  display:none;
+  object-fit: fill;
+  height: 200px;
+  width: 100%;
 }
 
 q {
-    quotes: '"' '"' "'" "'";
-    font-style: italic;
-  }
-  q::before {
-    content: open-quote;
-  }
-  q::after {
-    content: close-quote;
-  }
+  quotes: '"' '"' "'" "'";
+  font-style: italic;
+}
+q::before {
+  content: open-quote;
+}
+q::after {
+  content: close-quote;
+}

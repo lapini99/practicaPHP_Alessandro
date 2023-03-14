@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/styleIndexLight.css">
     <link rel="stylesheet" href="./css/game-catalog.css">
     <link rel="icon" href="./multimedia/images/NB_Logo_Pink.png">
+    <!-- <script src="./javascript/displayTrailer.js"></script> -->
 </head>
 
 <body>
@@ -17,6 +18,7 @@
     ?>
     <div id="game-wrapper">
         <div class="game">
+            <iframe class='game-trailer' src='https://www.youtube.com/embed/Krc1t4HU8GI?autoplay=1&loop=1' title='MGSV: THE PHANTOM PAIN - E3 2014 Trailer (CHN)' frameborder='0' allow='accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
             <img class="game-cover" src="./multimedia/images/GamesCovers/mgsv.jpg" alt="mgsv-cover">
             <h1>Metal Gear Solid V</h1>
             <h2>Hideo Kojima</h2>

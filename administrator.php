@@ -18,6 +18,18 @@ session_start();
     <?php
     include("./commonHeader.php");
     ?>
+    <form action="" method="post">
+        <label for="name">Título: </label>
+        <input type="text" name="name" id="name">
+        <label for="author">Autor: </label>
+        <input type="text" name="author" id="author">
+        <label for="description">Descripción: </label>
+        <input type="text" name="description" id="description">
+        <label for="image">Imagen: </label>
+        <input type="file" name="image" id="image">
+        <label for="video"></label>
+        <input type="text" name="video" id="video">
+    </form>
 </body>
 
 </html>
