@@ -79,4 +79,9 @@ input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
     text-align: left;
 }
 
+form {
+    margin: 3%;
+    width: 70%;
+}
+
 

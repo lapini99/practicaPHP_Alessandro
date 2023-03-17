@@ -1,6 +1,24 @@
 <?php
 require_once("./src/db/login.php");
 require_once("./src/db/register.php");
+
+$regExMail = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/";
+if (!isset($_POST["mail"]) || empty($_POST["mail"])) {
+    $mail = "default@default.com"; 
+} else if (!preg_match($regExMail, $_POST["mail"])) {
+    echo "<script>alert('Error en el correo')</script>";
+} else {
+    $mail = $_POST["mail"];
+}
+
+$regExUser = "/^[a-zA-Z]+$/";
+if (!isset($_POST["user"]) || empty($_POST["user"])) {
+    $user = "defaultUser"; 
+} else if (!preg_match($regExUser, $_POST["user"])) {
+    echo "<script>alert('Error en el usuario')</script>";
+} else {
+    $user = $_POST["user"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +32,7 @@ require_once("./src/db/register.php");
     <link rel="stylesheet" href="./css/styleIndexLight.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="icon" href="./multimedia/images/NB_Logo_Pink.png">
+    <script src="./javascript/validateForms.js"></script>
 </head>
 
 <body>
@@ -24,7 +43,6 @@ require_once("./src/db/register.php");
         <div id="forms-container">
             <div class="container">
                 <div id="form-info">
-                    <!-- <img src="./multimedia/images/LightTheme/NB_Logo_Black.png" alt="logo" height="70px" width="165px"> -->
                 </div>
                 <div class="wrapper">
                     <div class="item-form">
@@ -46,7 +64,7 @@ require_once("./src/db/register.php");
                             <input type="email" name="mail" id="mail">
                             <label for="pwd">Contraseña</label>
                             <input type="password" name="pwd" id="pwd">
-                            <input type="submit" name="register" value="Enviar">
+                            <input type="submit" name="register" value="Enviar" onclick="registerForm()">
                         </form>
                     </div>
                 </div>
