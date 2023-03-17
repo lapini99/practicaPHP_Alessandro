@@ -20,7 +20,7 @@ require_once("./src/db/connection.php");
     include("./commonHeader.php");
     ?>
     <div id="game-wrapper">
-        <div class="game">
+        <!-- <div class="game">
             <iframe class='game-trailer' src='https://www.youtube.com/embed/Krc1t4HU8GI?autoplay=1&mute=1&controls=0' title='MGSV: THE PHANTOM PAIN - E3 2014 Trailer (CHN)' frameborder='0' allow='accelerometer; autoplay; controls; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
             <img class="game-cover" src="./multimedia/images/GamesCovers/mgsv.jpg" alt="mgsv-cover">
             <h1>Metal Gear Solid V</h1>
@@ -33,13 +33,9 @@ require_once("./src/db/connection.php");
                 <input type='number' name='id' id='id' value='<?= $row["id"]?>' hidden>
                 <input type='submit' value='Ver más' name="gameInfo">
             </form>
-        </div>
+        </div> -->
         <?php
         require_once("./src/db/gameMapper.php");
-        if (!isset($_SESSION["id"])) {
-            echo "<script>alert('Debe iniciar sesión para acceder a esta página')</script>";
-            exit;
-        }
         ?>
     </div>
 </body>

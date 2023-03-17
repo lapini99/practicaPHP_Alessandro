@@ -9,6 +9,8 @@ if (!isset($_SESSION["id"])) {
 }
 
 $user = $_SESSION["user"];
+$pwd = $_SESSION["pwd"];
+$profPic = $_SESSION["profPic"];
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +33,13 @@ include("./commonHeader.php");
 ?>
 <main>
     <div id="profile-container">
-        <img src="./multimedia/images/profPicDefault.png" alt="profile-picture" id="prof-pic-preview">
-        <form action="" method="post">
-            <input type="file">
+        <img src="<?= $profPic ?>" alt="profile-picture" id="prof-pic-preview">
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" id="image" class="mod" accept="image/png, image/jpeg" disabled>
             <label for="user"></label>
             <input type="text" name="user" class="mod" id="user" value="<?= $user ?>" disabled>
             <label for="pwd"></label>
-            <input type="password" name="pwd" class="mod" id="pwd" value="user-password" disabled>
+            <input type="password" name="pwd" class="mod" id="pwd" value="<?= $pwd ?>" disabled>
             <input type="submit" value="Guardar cambios" name="updateProf">
         </form>
         <button id="modify" name="modify">Modificar</button>

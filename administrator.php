@@ -1,5 +1,9 @@
 <?php
 require_once("./src/db/addGame.php");
+if (!isset($_SESSION["id"]) || $_SESSION["id"] != 1) {
+    header("Location: ./index.php");
+    exit();
+}
 if (isset($_POST["addGame"])) {
     $name = trim($_POST["name"]);
     $author = trim($_POST["author"]);
@@ -7,12 +11,12 @@ if (isset($_POST["addGame"])) {
     $image = $_FILES["image"]["name"];
     $video = trim($_POST["video"]);
     
-    // Validate required fields
+    // Validar los campos requeridos
     if (empty($name) || empty($author) || empty($description) || empty($image) || empty($video)) {
         echo "<script>alert('Por favor complete todos los campos')</script>";
     }
     
-    // Validate image file type
+    // Validar el tipo de imagen
     $imageFileType = strtolower(pathinfo($image,PATHINFO_EXTENSION));
     if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png") {
         echo "<script>alert('Solo se permiten archivos JPG, JPEG y PNG')</script>";

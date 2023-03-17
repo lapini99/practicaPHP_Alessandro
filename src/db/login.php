@@ -16,6 +16,7 @@ if (isset($_POST["login"])) {
     } else {
         if (password_verify($pwd, $resultCon["pwd"])) {
             $_SESSION["id"] = $resultCon["id"];
+            $_SESSION["profPic"] = $resultCon["profPic"];
             $_SESSION["user"] = $resultCon["user"];
             $_SESSION["pwd"] = $resultCon["pwd"];
         echo "<script>alert('inicio de sesión realizado')<script/>";

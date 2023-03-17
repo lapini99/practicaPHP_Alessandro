@@ -21,6 +21,10 @@ require_once("./src/db/connection.php");
     <main>
         <div id="container">
             <?php
+                    if (!isset($_SESSION["id"])) {
+                        echo "<script>alert('Debe iniciar sesión para acceder a esta página')
+                        window.location.href = './login.php'</script>";
+                    }
             if (isset($_POST["gameInfo"])) {
                 $id = $_POST["id"];
                 $query = $connection->prepare("SELECT * FROM games WHERE id=:id_p");

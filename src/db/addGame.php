@@ -3,7 +3,7 @@ require_once("connection.php");
 if (isset($_POST["addGame"])) {
     $image = $_FILES["image"]["name"] ?? "default-image.jpg";
     if ($image != "") {
-        // Where the file is going to be stored
+        // Doonde guardaremos el archivo
         $target_dir = "./multimedia/images/GamesCovers/";
         $file = $_FILES["image"]["name"];
         $path = pathinfo($file);
@@ -22,7 +22,7 @@ if (isset($_POST["addGame"])) {
             echo "<script>alert('¡El archivo ya existe!')</script>";
         } else {
             move_uploaded_file($temp_name, $path_filename_ext);
-            echo "<script>alert('Imagen guardada con éxito')</script>";
+            echo "<script>alert('Guardado con éxito')</script>";
         }
 
         $query = $connection->prepare("SELECT * FROM games where name=:name_p");
